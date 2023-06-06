@@ -1,0 +1,26 @@
+<h1>States</h1>
+<div>
+    <div *ngIf="stateResponse.totalCount > 0">
+        <table class="table">
+            <thead>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Action</td>
+            </thead>
+            <tbody>
+                <tr *ngFor="let state of stateResponse.items">
+                    <td>{{state.Id}}</td>
+                    <td>{{state.name}}</td>
+                    <td>
+                        <div>
+                            <button class="btn btn-danger">delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="stateResponse.totalCount == 0">
+        <h3>No States found</h3>
+    </div>
+</div>

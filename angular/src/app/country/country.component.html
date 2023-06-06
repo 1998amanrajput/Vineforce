@@ -1,0 +1,26 @@
+<h1>Countries</h1>
+<div>
+    <div *ngIf="countriesResponse.totalCount > 0">
+        <table class="table">
+            <thead>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Action</td>
+            </thead>
+            <tbody>
+                <tr *ngFor="let country of countriesResponse.items">
+                    <td>{{country.Id}}</td>
+                    <td>{{country.name}}</td>
+                    <td>
+                        <div>
+                            <button class="btn btn-danger" (click)="deleteCountry(country.id)">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="countriesResponse.totalCount == 0">
+        <h3>No Countries found</h3>
+    </div>
+</div>

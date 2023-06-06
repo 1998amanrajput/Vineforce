@@ -14,6 +14,8 @@ import { AbpValidationSummaryComponent } from './components/validation/abp-valid
 import { AbpModalHeaderComponent } from './components/modal/abp-modal-header.component';
 import { AbpModalFooterComponent } from './components/modal/abp-modal-footer.component';
 import { LayoutStoreService } from './layout/layout-store.service';
+import { CountryService } from './country/country.service';
+import { StateService } from './state/state.service';
 
 import { BusyDirective } from './directives/busy.directive';
 import { EqualValidator } from './directives/equal-validator.directive';
@@ -52,7 +54,9 @@ export class SharedModule {
                 AppUrlService,
                 AppAuthService,
                 AppRouteGuard,
-                LayoutStoreService
+                LayoutStoreService,
+                CountryService,
+                StateService
             ]
         };
     }
